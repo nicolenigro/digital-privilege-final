@@ -1,6 +1,10 @@
 body{
     font-family: 'Noto Sans', sans-serif;
     background-color: lightgray;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 70px;
+    padding-bottom: 70px;
 }
 
 h1{
