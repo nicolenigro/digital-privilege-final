@@ -4,20 +4,18 @@ import seaborn as sns
 
 
 df = pd.read_csv('foreveralone.csv')
-df.replace(to_replace="No", value=0)
-df.replace(to_replace="Yes", value=1)
-
-print(df)
 
 sns.set_style('darkgrid')
 
+#GENDER
 sns.countplot(x ='gender', data = df)
 plt.savefig('gender.png')
 
-plt.figure()
-sns.stripplot(x ='gender', y ='friends', data = df, jitter = True, dodge = True)
-plt.savefig('friends.png')
-
-plt.figure()
-sns.stripplot(x ='friends', y ='depressed', data = df, jitter = True, dodge = True, hue='gender')
+#FRIENDS & DEPRESSED BY GENDER
+sns.catplot(data=df, kind="bar", x="depressed", y="friends", hue="gender")
 plt.savefig('depressed.png')
+
+#FRIENDS & SOCIAL FEAR BY GENDER
+plt.figure()
+sns.catplot(data=df, kind="bar", x="social_fear", y="friends", hue="gender")
+plt.savefig('social_fear.png')
