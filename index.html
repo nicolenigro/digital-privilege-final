@@ -14,11 +14,11 @@
     </h1>
     <h2>Project Overview</h2>
     <p>In this project, we will be focusing on Reddit and gender. With sentiment analysis and data visualizations,
-      our findings will demonstrate the relationship between subreddit demographic and activity.
+      our findings will demonstrate the relationship between gender and emotional wellbeing.
     </p>
     <h2>r/ForeverAlone</h2>
     <p><a href="https://www.reddit.com/r/ForeverAlone/">r/ForeverAlone</a> is a subreddit for Forever Alone Folks.
-      It has 166k members and was created on September 15, 2010. The 9 rules of this subreddit are:
+      It has 166k members and was created on September 15, 2010. The 9 rules of this subreddit are: </p>
       <ol type="1">
         <li>Be polite, friendly and welcoming.</li>
         <li>Do not tell anyone they are not forever alone enough to be here. Foreveralone has no firm definition.</li>
@@ -30,6 +30,7 @@
         <li>Do not post your dick.</li>
         <li>No "rate me" threads.</li>
       </ol>
+      <p><
       Using <a href="https://www.kaggle.com/kingburrito666/the-demographic-rforeveralone-dataset">The Demographic
       /r/ForeverAlone Dataset</a> available on Kaggle, we created data visualizations using the Seaborn Python library to highlight
       the relationship between gender and number of friends, social fear, depression, etc. We also created word clouds on Voyant to highlight
@@ -42,6 +43,7 @@
       This subreddit is very male-heavy, with 84% of respondents identifying as male and 16% identifying as female. According to
       <a href="https://www.alphr.com/demographics-reddit/">Pew Research's 2016 poll</a>, over two-thirds of Reddit users in the 
       United States skewed male. So, the gender breakdown of this survey are in line with Reddit gender demographics.
+      <br>
       <img src="visualizations/gender.png" width=40%>
       <br>
       <br>
@@ -61,6 +63,7 @@
       Among the gender breakdown for this answer, females without social fear (~25) have more real life friends than men without social fear (~13). So, there 
       is not a gendered difference in number of real life friends for members of this subreddit who have social fear, but there is a gendered difference in number of 
       real life friends for members of this subreddit who do not have social fear.
+      <br>
       <img src="visualizations/social_fear.png" width=40%>
       <br>
       <br>
@@ -112,6 +115,25 @@
     to them. We previously noted that some reddit posters in r/ForeverAlone would voice the fact that they don't want help,
     but the fact that they are frequenting this subreddit suggests that it may in itself be a form of help. After all, being heard
     is sometimes all a person wants, and an anonymous forum such as reddit provides a perfect environment for that.
+    <br>
+    <br>
+    Further Analysis:
+    <br>
+    <br>
+    <img src="visualizations/average_compound.png">
+    <br>
+    <img src="visualizations/Top_3.png">
+    <br>
+    <img src="visualizations/Bottom_3.png">
+    <br>
+    <br>
+    These visualizations again demonstrate that subreddits generally display much more positive sentiment than negative. The 
+    average compound sentiment across all captured subreddits is 0.65 which clearly leans more positive. Also, when running an
+    Analysis of the Top 3 subreddits by average compound, the returned list is relatively long due to the fact that many
+    subreddits tie each other for positive sentiment score. Interestingly, the subreddits span a very wide array of topics and
+    prove to be supportive of a diverse group of interests. The Bottom 3 subreddit analysis has fewer subreddits that tie for
+    the lowest scores, which supports the idea that generally there are more supportive than unsuportive subreddits on the site.
+    
     </p>
     <h2>Conclusion</h2>
   </body>
