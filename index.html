@@ -30,45 +30,67 @@
         <li>Do not post your dick.</li>
         <li>No "rate me" threads.</li>
       </ol>
-      <br>
       Using <a href="https://www.kaggle.com/kingburrito666/the-demographic-rforeveralone-dataset">The Demographic
-      /r/ForeverAlone Dataset</a> available on Kaggle, we created data visualizations to highlight the relationship between 
-      gender and friends, mental health, etc. In 2016, a survey was posted to the r/ForeverAlone subreddit, asking questions such
-      as "What is your Gender?", "Do you have social anxiety/phobia?", and "Are you depressed?". The survey got 469
-      responses from redditors active on the r/ForeverAlone subreddit; this data is our dataset for this section.
+      /r/ForeverAlone Dataset</a> available on Kaggle, we created data visualizations using the Seaborn Python library to highlight
+      the relationship between gender and number of friends, social fear, depression, etc. In 2016, a survey was posted to the r/ForeverAlone subreddit, asking
+      questions such as "What is your Gender?", "How many friends do you have IRL?", "Do you have social anxiety/phobia?", and
+      "Are you depressed?". The survey got 469 responses from redditors active on the r/ForeverAlone subreddit; this data is our
+      dataset for this section.
       <br>
       <br>
-      This subreddit is very male-heavy, with 84% of respondents identifying as male and 16% identifying as female.
+      This subreddit is very male-heavy, with 84% of respondents identifying as male and 16% identifying as female. According to
+      <a href="https://www.alphr.com/demographics-reddit/">Pew Research's 2016 poll</a>, over two-thirds of Reddit users in the 
+      United States skewed male. So, the gender breakdown of this survey are in line with Reddit gender demographics.
       <img src="visualizations/gender.png" width=40%>
+      <br>
+      <br>
+      The following data visualization plots depressed (yes or no) on the x axis and number of real life friends on the y axis, with breakdowns
+      by respondent gender. Redditors on r/ForeverAlone who are depressed on average have a smaller number of real life friends (~5) and this 
+      is the same for males and females. Meanwhile, redditors on r/ForeverAlone who said they are not depressed have more real life friends
+      than the redditors in this subreddit who are depressed. It is interesting to note females who are not depressed have more real life friends 
+      (~20) than males who are not depressed (~13). This could suggest that depression is linked to feeling lonely and unsupported by real life
+      friends.
+      <br>
+      <img src="visualizations/depressed.png" width=40%>
+      <br>
+      <br>
+      Similar to the previous data visualization, this one plots social fear (yes or no) on the x axis and number of real life friends on the y axis,
+      with breakdowns by respondent gender. Redditors on r/ForeverAlone who have social fear (i.e. social anxiety/phobia) on average have less friends
+      (~3-4). The breakdown is the same for females and males. Meanwhile, redditors on r/ForeverAlone who said they do not have social fear have more friends.
+      Among the gender breakdown for this answer, females without social fear (~25) have more real life friends than men without social fear (~13). So, there 
+      is not a gendered difference in number of real life friends for members of this subreddit who have social fear, but there is a gendered difference in number of 
+      real life friends for members of this subreddit who do not have social fear.
+      <img src="visualizations/social_fear.png" width=40%>
       <br>
       <br>
       The question "What kind of help do you want from others?" was a select all type of question. For respondents who identify
       as female (n=73), the most frequent words are help (42); want (41); date (29); set (17); coaching (12). However, looking at
-      the frequency of help alone is misleading because it is used within the phrase "I don't want help."
+      the frequency of help alone is misleading because it is used within the phrase "I don't want help"; that is actually the most
+      popular answer to this question from females on this subreddit. Females on this subreddit also expressed desire getting help with dating.
       <br>
       <img src="visualizations/help_from_others_female.png" width=40%>
       <br>
       <br>
       For respondents who identify as male (n=393), the most frequent words are date (235); help (195); want (193); set (146);
-      wingman (115). 
+      wingman (115). The popularity of answers to this question is flipped for males, with their top want to get help with being dating
+      followed by "I don't want help."
       <br>
       <img src="visualizations/help_from_others_male.png" width=40%>
       <br>
       <br>
       The question "What have you done to try and improve yourself?" was another select all that apply question. For respondents
-      who identify as female, the most frequent words are clubs (62); gym (58); exercise (31); join (31); meet (31).
+      who identify as female, the most frequent words are clubs (62); gym (58); exercise (31); join (31); meet (31). So, females are
+      most likely to try to do social things such as joining clubs or physical activity such as going to the gym and exercising. This suggests
+      that self-improvement for females is rooted in social engagement and health.
       <br>
       <img src="visualizations/improvement_female.png" width=40%>
       <br>
       <br>
       For respondents who identify as male, the most frequent words are gym (320); clubs (218); exercise (164); joined (162);
-      join (109).
+      join (109). This is similar to the results for females, but gym was overwhelmingly more popular than clubs. Gyms aren't necessarily
+      social places, while clubs are. So self-improvement for males could be more rooted in health and physical appearance.
       <br>
       <img src="visualizations/improvement_male.png" width=40%>
-      <br>
-      <img src="visualizations/depressed.png" width=40%>
-      <br>
-      <img src="visualizations/social_fear.png" width=40%>
     </p>
     <h2>Sentiment Analysis</h2>
     <p> The Sentiment Analaysis data collected comes from the <a href="https://github.com/google-research-datasets/coarse-discourse">Google Coarse-Discourse</a> github page.
